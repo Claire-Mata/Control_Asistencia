@@ -19,14 +19,14 @@ Tabla de tareas con sus respectivos encargados:
 | |Otros Requisitos|`En Proceso`
 |Jorge Eduardo Romero Garcia|Introducción| `En Proceso`|
 | |Propósito|`Finalizada`
-| |Ambito del Sistema|`Finalizada`
-| |Definiciones, Acronimos y Abreviaturas|`En Proceso`
+| |Ámbito del Sistema|`Finalizada`
+| |Definiciones, Anacronismos y Abreviaturas|`En Proceso`
 | |Referencias|`En Proceso`
 | |Visión General del Documento|`En Proceso`
 |Junior Mauricio Villalta Flores|Descripción General| `En Proceso`
 | |Perspectiva del Producto|`Finalizada`
 | |Funciones del Producto|`Finalizada`
-| |Caracterısticas de los Usuarios|`Finalizada`
+| |Características de los Usuarios|`Finalizada`
 | |Restricciones|`Finalizada`
 | |Suposiciones y Dependencias|`Finalizada`
 | |Requisitos Futuros|`En Proceso`
