@@ -9,20 +9,20 @@ Tabla de tareas con sus respectivos encargados:
 |----------------|-------------------------------|-----------------------------|
 |Alejandra Claire Aguilar Mata|Caratula|`Finalizada`
 || inspeccionar gramática y coherencia           |`En proceso`            |
-|Jorge Luis Granados Umanzor        |Apéndice |`En Proceso`
-|Cristian Alexander Guardado Escobar        |Requisitos Específicos|`En Proceso`|
+|Jorge Luis Granados Umanzor        |Apéndice |`Pendiente`
+|Cristian Alexander Guardado Escobar        |Requisitos Específicos|`Pendiente`|
 | |Interfaces Externas|`En Proceso`
-| |Funciones|`En Proceso`
-| |Requisitos de Rendimiento|`En Proceso`
-| |Restricciones de Diseño|`En Proceso`
-| |Atributos del Sistema|`En Proceso`
-| |Otros Requisitos|`En Proceso`
+| |Funciones|`Pendiente`
+| |Requisitos de Rendimiento|`Pendiente`
+| |Restricciones de Diseño|`Pendiente`
+| |Atributos del Sistema|`Pendiente`
+| |Otros Requisitos|`Pendiente`
 |Jorge Eduardo Romero Garcia|Introducción| `En Proceso`|
 | |Propósito|`Finalizada`
 | |Ámbito del Sistema|`Finalizada`
-| |Definiciones, Anacronismos y Abreviaturas|`En Proceso`
-| |Referencias|`En Proceso`
-| |Visión General del Documento|`En Proceso`
+| |Definiciones, Anacronismos y Abreviaturas|`Pendiente`
+| |Referencias|`Pendiente`
+| |Visión General del Documento|`Pendiente`
 |Junior Mauricio Villalta Flores|Descripción General| `En Proceso`
 | |Perspectiva del Producto|`Finalizada`
 | |Funciones del Producto|`Finalizada`
