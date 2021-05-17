@@ -10,13 +10,13 @@ Tabla de tareas con sus respectivos encargados:
 |Alejandra Claire Aguilar Mata|Caratula|`Finalizada`
 || inspeccionar gramática y coherencia           |`En proceso`            |
 |Jorge Luis Granados Umanzor        |Apéndice |`Pendiente`
-|Cristian Alexander Guardado Escobar        |Requisitos Específicos|`Pendiente`|
-| |Interfaces Externas|`En Proceso`
-| |Funciones|`Pendiente`
-| |Requisitos de Rendimiento|`Pendiente`
-| |Restricciones de Diseño|`Pendiente`
-| |Atributos del Sistema|`Pendiente`
-| |Otros Requisitos|`Pendiente`
+|Cristian Alexander Guardado Escobar        |Requisitos Específicos|`Finalizada`|
+| |Interfaces Externas|`Finalizada`
+| |Funciones|`Finalizada`
+| |Requisitos de Rendimiento|`Finalizada`
+| |Restricciones de Diseño|`En proceso`
+| |Atributos del Sistema|`Finalizada`
+| |Otros Requisitos|`Finalizada`
 |Jorge Eduardo Romero Garcia|Introducción| `En Proceso`|
 | |Propósito|`Finalizada`
 | |Ámbito del Sistema|`Finalizada`
