@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Admin</title>
+</head>
+<body style="background-color: #e4efe7;">
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class=" d-flex flex-row bd-highlight mb-3">
+            <span class="navbar-brand mb-0 h1 d-inline p-2">Admin</span>
+            <a class="btn btn-dark d-inline p-2" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Menu</a>
+        </div>
+    </nav>
+    <div class="d-flex align-items-center" >    
+      <div class="collapse multi-collapse" id="multiCollapseExample1"  style="background-color: #325288;" >
+          <!-- Tab navs -->
+        <div
+        class="nav flex-column nav-tabs text-center my-2"
+        id="v-tabs-tab"
+        role="tablist"
+        aria-orientation="vertical"
+        >
+          <button
+          class="nav-link my-4 text-light btn-lg"
+          id="v-tabs-Agregar-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-Agregar"
+          role="tab"
+          aria-controls="v-tabs-Agregar"
+          aria-selected="true"
+          style="background-color: #325288;">
+            Agregar
+          </button>
+          <button
+          class="nav-link my-4 text-light btn-lg "
+          id="v-tabs-Modificar-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-Modificar"
+          role="tab"
+          aria-controls="v-tabs-Modificar"
+          aria-selected="false"
+          style="background-color: #325288;">
+            Modificar
+          </button>
+          <button
+          class="nav-link my-4 text-light btn-lg"
+          id="v-tabs-Eliminar-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-Eliminar"
+          role="tab"
+          aria-controls="v-tabs-Eliminar"
+          aria-selected="false"
+          style="background-color: #325288;"
+          >Eliminar</button>
+          <button
+          class="nav-link my-4 text-light btn-lg"
+          id="v-tabs-ReporteD-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-ReporteD"
+          role="tab"
+          aria-controls="v-tabs-ReporteD"
+          aria-selected="false"
+          style="background-color: #325288;"
+          >Reporte Diario</button
+          >
+          <button
+          class="nav-link my-4 text-light btn-lg"
+          id="v-tabs-ReporteM-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-ReporteM"
+          role="tab"
+          aria-controls="v-tabs-ReporteM"
+          aria-selected="false"
+          style="background-color: #325288;"
+          >Reporte mensual</button
+          >
+          <button
+          class="nav-link my-4 text-light btn-lg"
+          id="v-tabs-ReporteA-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-ReporteA"
+          role="tab"
+          aria-controls="v-tabs-ReporteA"
+          aria-selected="false"
+          style="background-color: #325288;"
+          >Reporte anual</button
+          >
+          <button
+          class="nav-link my-4 text-light btn-lg"
+          id="v-tabs-ReporteE-tab"
+          data-bs-toggle="tab"
+          href="#v-tabs-ReporteE"
+          role="tab"
+          aria-controls="v-tabs-ReporteE"
+          aria-selected="false"
+          style="background-color: #325288;"
+          >Reporte por empleado</button
+          >
+        </div>
+          <!-- Tab navs -->
+      
+  </div><!-- Tab content -->
+      <div class="tab-content flex-grow-1 ms-3" id="v-tabs-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="v-tabs-Agregar"
+          role="tabpanel"
+          aria-labelledby="v-tabs-Agregar-tab"
+        >
+          Agregar empleados
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-Modificar"
+          role="tabpanel"
+          aria-labelledby="v-tabs-Modificar-tab"
+        >
+          Modificar empleado
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-Eliminar"
+          role="tabpanel"
+          aria-labelledby="v-tabs-Eliminar-tab"
+        >
+          Eliminar empleado
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-ReporteD"
+          role="tabpanel"
+          aria-labelledby="v-tabs-ReporteD-tab"
+          >
+            Reporte diario 
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-ReporteM"
+          role="tabpanel"
+          aria-labelledby="v-tabs-ReporteM-tab"
+        >
+            Reporte mensual
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-ReporteA"
+          role="tabpanel"
+          aria-labelledby="v-tabs-ReporteA-tab"
+        >
+            Reporte anual
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-ReporteE"
+          role="tabpanel"
+          aria-labelledby="v-tabs-ReporteE-tab"
+        >
+            Reporte por empleado
+        </div>
+      </div>
+  </div>  
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+</body>
+</html>
