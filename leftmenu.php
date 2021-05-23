@@ -9,8 +9,8 @@ aria-orientation="vertical"
 >
 	<!--EN EL HREF PONDRAN SU PAGINA PHP DE CADA COSA-->
 	<a href="add2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Agregar Datos</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Modificar</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Eliminar</a>
+	<a href="modify2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Modificar</a>
+	<a href="remove2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Eliminar</a>
 	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte diaro</a>
 	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte Mensual</a>
 	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte anual</a>
