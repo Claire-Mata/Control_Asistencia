@@ -12,7 +12,7 @@ Tabla de tareas del primer sprint con sus respectivos encargados:
 |3|Interfaz de agregar, modificar y eliminar usuarios|Junior Mauricio Villalta Flores| `Finalizado`
 |4|Interfaz de modulo usuario(asistencia)|Jorge Eduardo Romero Garcia | `Finalizado`|
 |||Alejandra Claire Aguilar Mata||
-|5   |Interfaz de reportes y interfaz de expediente|Jorge Luis Granados Umanzor      |`Pendiente`|
+|5   |Interfaz de reportes y interfaz de expediente|Jorge Luis Granados Umanzor      |`En proceso`|
 |||Jorge Eduardo Romero Garcia||
 |||Junior Mauricio Villalta Flores||
 
