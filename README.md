@@ -7,7 +7,7 @@ Tabla de tareas del primer sprint con sus respectivos encargados:
 
 |Prioridad|              Tarea  | Encargados                       |Estado                       |
 |----------------|----------------|-------------------------------|-----------------------------|
-|1   |Interfaz de login|Cristian Alexander Guardado Escobar     |`En proceso`|
+|1   |Interfaz de login|Cristian Alexander Guardado Escobar     |`Finalizado`|
 |2|Interfaz de admin|Alejandra Claire Aguilar Mata|`Finalizado`
 |3|Interfaz de agregar, modificar y eliminar usuarios|Junior Mauricio Villalta Flores| `Finalizado`
 |4|Interfaz de modulo usuario(asistencia)|Jorge Eduardo Romero Garcia | `Finalizado`|
