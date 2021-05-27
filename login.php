@@ -1,6 +1,10 @@
 <?php
-// Buscar usuario en base de datos
+session_start();
+if(isset($_SESSION['id_empleado'])){
+    header("Location: index.php");
+}
 
+// Buscar usuario en base de datos
 if(!empty($_POST)) {
     $usuario = mysqli_real_escape_string($con, $_POST['name']);
     $contrasenia = mysqli_real_escape_string($con, $_POST['password']);;
@@ -9,14 +13,13 @@ if(!empty($_POST)) {
     $filas = $resultado -> num_rows;
     if($filas > 0){
         $fila = $resultado -> fetch_assoc();
-            // $_SESSION["tipo_usuario"] = $fila["tipo"];
-            // echo "<script type='text/javascript'>alert('pagina de admin');</script>";
-            header("Location: admin_ventana.php");
+        $_SESSION['id_empleado'] = $fila["codigo"];
+        // echo $_SESSION["idEmpleado"];
+        header("Location: admin_ventana.php");
     }else{
         $mensaje = 'usuario o contrasenia incoreccto';
         echo "<script type='text/javascript'>alert('$mensaje');</script>";
         // header("Location: index.php");   
     }
 }
-
 ?>
