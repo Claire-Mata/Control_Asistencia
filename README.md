@@ -15,6 +15,7 @@ Tabla de tareas del primer sprint con sus respectivos encargados:
 |5   |Interfaz de reportes y interfaz de expediente|Jorge Luis Granados Umanzor      |`En proceso`|
 |||Jorge Eduardo Romero Garcia||
 |||Junior Mauricio Villalta Flores||
+|||Alejandra Claire Aguilar Mata||
 
 
 
