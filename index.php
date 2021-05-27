@@ -21,7 +21,7 @@ date_default_timezone_set('America/El_Salvador');
         <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST" class="d-flex flex-row p-1">
             <div class="d-flex flex-row m-1">
                 <div class="form-group has-feedback bg-light m-1 border border-light rounded">
-                    <input type="text" name="name" id="name" placeholder="Usuario" class="w-auto h-100">
+                    <input type="text" name="name" id="name" placeholder="Codigo de usuario" class="w-auto h-100">
                     <img src="svg/people.svg" alt="User" class="px-2 py-0">
                 </div>
                 <div class="form-group has-feedback bg-light m-1 border border-light rounded">
