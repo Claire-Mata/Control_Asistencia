@@ -15,7 +15,7 @@ aria-orientation="vertical"
 	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte Mensual</a>
 	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte anual</a>
 	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte por empleado</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Empleados Activos</a>
+	<a href="asistencia.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Empleados Activos</a>
 
 	
 </div>
