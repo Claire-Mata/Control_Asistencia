@@ -27,10 +27,12 @@ if(mysqli_num_rows($sql1)> 0){
 	$datos['hora_s']=$row['hora_s'];
 	if($marca=='E'){
 		$update = mysqli_query($con, "UPDATE marcas SET hora_e='$hora' WHERE codigo='$codigo' AND fecha='$fecha'") or die(mysqli_error());
+		$update1 = mysqli_query($con, "UPDATE empleados SET estado='1' WHERE codigo='$codigo'") or die(mysqli_error());
 		$tipo_marc=" MARCA ENTRADA A LAS ";
 	}
 	if($marca=='S'){
 		$update = mysqli_query($con, "UPDATE marcas SET hora_s='$hora' WHERE codigo='$codigo' AND fecha='$fecha'") or die(mysqli_error());
+		$update1 = mysqli_query($con, "UPDATE empleados SET estado='0' WHERE codigo='$codigo'") or die(mysqli_error());
 		$tipo_marc=" MARCA SALIDA A LAS ";
 	}
 	if($update){
