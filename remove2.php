@@ -3,6 +3,8 @@
 <?php
 include("head.php");
 include("leftmenu.php");
+include("eliminar.php");
+
 ?>
 
 <link href="css/bootstrap-datepicker.css" rel="stylesheet">
@@ -12,7 +14,6 @@ include("leftmenu.php");
       <h2>Datos del empleado &raquo; Eliminar empleado</h2>
       <hr>
       <form class="form-horizontal" action="" method="post">
-      
       <div class="form-group">
              <div class="col-sm-6">
                 <div class="alert alert-warning" role="alert">
@@ -22,7 +23,7 @@ include("leftmenu.php");
         </div>
         <div class="form-group">
             <div class="col-sm-6">
-                <input type="text" name="id" class="form-control" placeholder="ID" required>
+                <input type="text" name="codigo" class="form-control" placeholder="ID" required>
             </div>
           </div>
           <div class="form-group">
