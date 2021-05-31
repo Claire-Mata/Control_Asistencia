@@ -33,6 +33,7 @@ Tabla de tareas del segundo sprint con sus respectivos encargados:
 |6|logica de reportes diaros, mensuales, anuales y por  empleado|Jorge Luis Granados Umanzor  |`En proceso`|
 |||Jorge Eduardo Romero Garcia||
 |||Alejandra Claire Aguilar Mata||
+|||Junior Mauricio Villalta Flores||
 
 
 
