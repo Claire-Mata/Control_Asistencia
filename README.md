@@ -1,6 +1,23 @@
 # Control_Asistencia
 Sistema de control de asistencia de empleados
 
+## Product Backlog
+
+Tabla de nuestro product backlog:
+
+|Item|              Estimacion |
+|----------------|----------------|
+|Autentificación de Usuario. |2 |
+|Registrar Usuarios.|3|
+|Modificar Usuarios|3|
+|Eliminar Usuarios.|3|
+|Realizar reportes (reportes diarios)|4|
+|Realizar reportes ( reportes mensuales y anuales)  |4|
+|Registrar asistencia de entrada y salida. (Registro de entrada)|4|
+|Registrar asistencia de entrada y salida. (Registro de salida)|4|
+
+
+
 ## Sprint 1
 
 Tabla de tareas del primer sprint con sus respectivos encargados:
