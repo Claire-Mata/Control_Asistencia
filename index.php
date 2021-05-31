@@ -12,26 +12,26 @@ date_default_timezone_set('America/El_Salvador');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
+    
     <title>Asistencia</title>
 </head>
 <body style="background-color: #e4efe7;">
+
     <nav class="d-flex justify-content-between bg-dark">
         <a href="index.php"><h4 class="p-2 m-2 text-light">LOGO</h4></a>
         
-        <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST" class="d-flex flex-row p-1">
+        <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST" class="d-flex flex-row p-1" id="formulario">
             <div class="d-flex flex-row m-1">
                 <div class="form-group has-feedback bg-light m-1 border border-light rounded">
-                    <input type="text" name="name" id="name" placeholder="Codigo de usuario" class="w-auto h-100">
+                    <input type="text" name="name" id="name" placeholder="Codigo de usuario" class="w-auto h-100" required>
                     <img src="svg/people.svg" alt="User" class="px-2 py-0">
                 </div>
                 <div class="form-group has-feedback bg-light m-1 border border-light rounded">
-                    <input type="password" name="password" id="password" placeholder="Contraseña" class="w-auto h-100">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" class="w-auto h-100" required>
                     <img src="svg/lock.svg" alt="Pass" class="px-2 py-0">
                 </div>
             </div>
-            <div>
-                <button type="submit" class="btn btn3 btn-light rounded m-2" name="acceder" id="btn">Acceder</button>
-            </div>
+            <input type="submit" class="btn btn3 btn-light rounded m-2" name="acceder" id="btn" value="Acceder">
         </form>
     </nav>
     

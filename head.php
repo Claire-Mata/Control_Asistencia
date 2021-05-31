@@ -29,17 +29,14 @@ $fila = $resultado -> fetch_assoc();
             <a class="btn btn-light d-inline p-2" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Menu</a>
         </div>
 
-        <div class="accordion accordion-flush align-self-end mx-2" id="accordionFlushExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    --- Bienvenid@ <?php echo utf8_decode($fila['nombres']);?> ---
-                </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><a href="salir.php">Cerrar session</a></div>
-            </div>
+        <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle mx-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="glyphicon glyphicon-user"></i> Bienvenid@ <?php echo utf8_decode($fila['nombres']);?> </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="salir.php"><i class="glyphicon glyphicon-edit"></i> Cerrar sesion</a></li>
+        </ul>
         </div>
+
     </nav>
     <div class="d-flex align-items-center" >
     
