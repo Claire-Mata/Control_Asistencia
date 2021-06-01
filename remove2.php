@@ -4,7 +4,6 @@
 include("head.php");
 include("leftmenu.php");
 include("eliminar.php");
-
 ?>
 
 <link href="css/bootstrap-datepicker.css" rel="stylesheet">
@@ -23,7 +22,7 @@ include("eliminar.php");
         </div>
         <div class="form-group">
             <div class="col-sm-6">
-                <input type="text" name="codigo" class="form-control" placeholder="ID" required>
+                <input type="text" name="cod_form" class="form-control" placeholder="Codigo de empleado" required>
             </div>
           </div>
           <div class="form-group">
