@@ -1,8 +1,8 @@
 <!--PHP PARA MODIFICAR EMPLEADOS-->
 
 <?php
-include("head.php");
-include("leftmenu.php");
+require_once("head.php");
+require_once("leftmenu.php");
 ?>
 
 <link href="css/bootstrap-datepicker.css" rel="stylesheet">

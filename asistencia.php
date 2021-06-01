@@ -1,7 +1,7 @@
 
 <?php
- include("head.php");
-include("leftmenu.php");
+require_once("head.php");
+require_once("leftmenu.php");
 
 
 $estado = 1;

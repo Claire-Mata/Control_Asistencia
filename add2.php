@@ -1,8 +1,8 @@
 <!--PHP PARA AGREGAR EMPLEADOS-->
 
 <?php
-include("head.php");
-include("leftmenu.php");
+require_once("head.php");
+require_once("leftmenu.php");
 ?>
 
 <div class="tab-content flex-grow-1 ms-3" id="v-tabs-tabContent">
