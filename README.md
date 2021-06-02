@@ -43,7 +43,7 @@ Tabla de tareas del segundo sprint con sus respectivos encargados:
 |1   |logica del login|Cristian Alexander Guardado Escobar     |`Finalizado`|
 |2|logica marcar asistencia|Jorge Eduardo Romero Garcia|`Finalizado`
 |||Alejandra Claire Aguilar Mata||
-|3|logica de agregar, modificar y eliminar usuarios|Junior Mauricio Villalta Flores| `En proceso`
+|3|logica de agregar, modificar y eliminar usuarios|Junior Mauricio Villalta Flores| `Finalizado`
 |||Cristian Alexander Guardado Escobar||
 |4|Interfaz y logica de empleados activos|Jorge Eduardo Romero Garcia | `Finalizado`|
 |5   |interfaz y logica de configurar horarios|Alejandra Claire Aguilar Mata     |`Finalizado`|
