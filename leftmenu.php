@@ -11,10 +11,9 @@ aria-orientation="vertical"
 	<a href="add2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Agregar Datos</a>
 	<a href="modify2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Modificar</a>
 	<a href="remove2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Eliminar</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte diaro</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte Mensual</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte anual</a>
-	<a href="#" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte por empleado</a>
+	<a href="reporteDiario.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte diaro</a>
+	<a href="reporteAnual.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte Intervalo de tiempo</a>
+	<a href="reporteEmp.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte por empleado</a>
 	<a href="asistencia.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Empleados Activos</a>
 
 	
