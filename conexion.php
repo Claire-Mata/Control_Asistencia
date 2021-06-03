@@ -3,7 +3,7 @@
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "empl"; // Nombre de tu base
+$db_name = "db_asistencia"; // Nombre de tu base
 //Ejecutar la conexion 
 $con = new mysqli($db_host, $db_user, $db_pass, $db_name);
 

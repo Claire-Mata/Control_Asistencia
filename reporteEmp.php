@@ -5,11 +5,11 @@ include("leftmenu.php");
 ?>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-		<div class="tab-content flex-grow-1 ms-3" id="v-tabs-tabContent">
+	<div class="tab-content flex-grow-1 ms-3" id="v-tabs-tabContent">
 	<div class="container">
 		<div class="content">
 			<h2>Lista de empleados</h2>
-			<hr />
+			<hr>
 
 			<?php
 			if(isset($_GET['aksi']) == 'delete'){
@@ -38,8 +38,7 @@ include("leftmenu.php");
 					<th>No</th>
 					<th>Código</th>
 					<th>Nombre</th>
-					<th>Lugar de nacimiento</th>
-					<th>Fecha de nacimiento</th>
+					<th>DUI</th>
 					<th>Teléfono</th>
 					<th>Cargo</th>
 					<th>Acciones</th>
@@ -63,8 +62,7 @@ include("leftmenu.php");
 							<td>'.$row['codigo'].'</td>
 						
 							<td><a href="profile.php?nik='.$row['codigo'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['nombres'].'</a></td>
-							<td>'.$row['lugar_nacimiento'].'</td>
-							<td>'.$row['fecha_nacimiento'].'</td>
+							<td>'.$row['dui'].'</td>
 							<td>'.$row['telefono'].'</td>
 							<td>'.$row['puesto'].'</td>';
 							$menu1='<td>
