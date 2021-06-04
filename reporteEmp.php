@@ -4,14 +4,16 @@ include("head.php");
 include("leftmenu.php");
 ?>
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-	<div class="tab-content flex-grow-1 ms-3" id="v-tabs-tabContent">
-	<div class="container">
-		<div class="content">
-			<h2>Lista de empleados</h2>
-			<hr>
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<div class="container ">
 
-			<?php
+  <div>
+    <h1 class="h4 mb-4 mt-5">Lista de Empleados</h1>
+    <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
+  </div>
+
+  	<div class="row">
+	  <?php
 			if(isset($_GET['aksi']) == 'delete'){
 				
 				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
@@ -29,21 +31,19 @@ include("leftmenu.php");
 				}
 			}
 			?>
-
-
-			<br />
-			<div class="table-responsive">
-			<table class="table table-striped table-hover">
-				<tr>
-					<th>No</th>
-					<th>Código</th>
-					<th>Nombre</th>
-					<th>DUI</th>
-					<th>Teléfono</th>
-					<th>Cargo</th>
-					<th>Acciones</th>
-				</tr>
-				<?php
+		<br>
+		<div class="table-responsive mt-5">
+		<table class="table table-striped table-hover">
+			<tr>
+				<th>No</th>
+				<th>Código</th>
+				<th>Nombre</th>
+				<th>DUI</th>
+				<th>Teléfono</th>
+				<th>Cargo</th>
+				<th>Acciones</th>
+			</tr>
+			<?php
 				if($filter){
 					//aqui es para mostrar a los empleados
 					$sql = mysqli_query($con, "SELECT * FROM empleados WHERE estado='$filter' ORDER BY codigo ASC");
@@ -61,20 +61,20 @@ include("leftmenu.php");
 							<td>'.$no.'</td>
 							<td>'.$row['codigo'].'</td>
 						
-							<td><a href="profile.php?nik='.$row['codigo'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['nombres'].'</a></td>
+							<td><a style="text-decoration:none;" href="profile.php?nik='.$row['codigo'].'"><span class="fas fa-user" aria-hidden="true"></span> '.$row['nombres'].'</a></td>
 							<td>'.$row['dui'].'</td>
 							<td>'.$row['telefono'].'</td>
 							<td>'.$row['puesto'].'</td>';
 							$menu1='<td>
 							<div class="dropdown">
 							<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="glyphicon glyphicon-user"></i>  Menu</button>
+							<i class="fas fa-bars"></i> Menu</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
-							$menu1.='<li><a class="dropdown-item" href="edit.php?nik='.$row['codigo'].'"><i class="glyphicon glyphicon-edit"></i> Editar</a></li>';
-							$menu1.='<li><a class="dropdown-item"  href="index2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="glyphicon glyphicon-trash"></i> Borrar</a></li>';
+							$menu1.='<li><a class="dropdown-item" href="edit.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
+							$menu1.='<li><a class="dropdown-item"  href="index2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
 							
 							
-							$menu1.="<li><a  class='dropdown-item' href='ver_llegadas.php?codigo=".$row['codigo']."' ><i class='glyphicon glyphicon-eye-open'></i> Ver LLegadas</a></li>";
+							$menu1.="<li><a  class='dropdown-item' href='ver_llegadas.php?codigo=".$row['codigo']."' ><i class='fas fa-eye'></i> Ver LLegadas</a></li>";
 							$menu1.="</ul>
 							</div>
 							</td></tr>";
@@ -83,9 +83,11 @@ include("leftmenu.php");
 					}
 				}
 				?>
-			</table>
-			</div>
-		</div>
+		</table>
+		</div>    
 	</div>
-	</div>
+	
+</div>
+
+	<!--  -->
   <?php include_once ("foot.php");?>
