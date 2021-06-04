@@ -4,8 +4,8 @@ require_once("head.php");
 require_once("leftmenu.php");
 
 
-$estado = 1;
-$consulta = "SELECT * FROM empleados WHERE estado = '$estado'";
+$activo = 1;
+$consulta = "SELECT * FROM empleados WHERE activo = '$activo'";
 $resultados = $con -> query($consulta);
 $activos = $resultados -> fetch_all();
 
@@ -15,41 +15,46 @@ function iterarActivos($activos){
      $limite = count($activos);
 
     for ($i=0; $i < $limite; $i++) { 
-        imprimirActivo($activos[$i][1],$activos[$i][6]);  
+        imprimirActivo($i+1,$activos[$i][0],$activos[$i][1],$activos[$i][5]);  
     } 
 
 }
 
-function imprimirActivo($nombre,$cargo){
+function imprimirActivo($numero,$codigo,$nombre,$cargo){
 
     echo <<<_ACTIVO
-
-        <div class="card shadow rounded my-3 col-sm-12  col-11 container" style="background-color: #325288;">
-            <div class="card-body row">
-                <span class="card-text text-light h6 col-sm-8 col-12">$nombre</span>    
-                <span class="card-text text-light h6 col-sm-4 col-12"> $cargo</span>
-            </div>
-        </div>
-
+        <tr>
+            <td>$numero</td>
+            <td>$codigo</td>
+            <td>$nombre</td>
+            <td>$cargo</td>
+            <tr>
     _ACTIVO;
 }
 
 ?>
 
     <div class="container">
-
-    <div>
-        <h1 class="h4 mb-4 mt-5">Empleados activos actualmente</h1>
-        <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
-    </div>
-    <div class="row">
-
-        <div class="col-sm-12  col-11 d-flex justify-content-center">
-            <button class="btn btn-primary" id="refrescar">refrescar</button>
+        <div>
+            <h1 class="h4 mb-4 mt-5">Empleados activos actualmente</h1>
+            <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
         </div>
-        <?php iterarActivos($activos); ?>
-    </div>
-    
+        <div class="row">
+            <div class="col-sm-12  col-11 d-flex justify-content-center">
+                <button class="btn btn-primary" id="refrescar">refrescar</button>
+            </div>
+            <div class="table-responsive mt-5">
+                <table class="table table-striped table-hover">
+                    <tr>
+                        <th>No</th>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Cargo</th>
+                    </tr>
+                    <?php iterarActivos($activos); ?>
+                </table>
+            </div>    
+        </div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
