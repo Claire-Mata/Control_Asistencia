@@ -7,8 +7,9 @@ if(isset($_SESSION['id_empleado'])){
 // Buscar usuario en base de datos
 if(!empty($_POST)) {
     $usuario = mysqli_real_escape_string($con, $_POST['name']);
-    $contrasenia = mysqli_real_escape_string($con, $_POST['password']);;
-    $consulta = "SELECT * FROM empleados WHERE codigo = '$usuario' AND contrasenia = '$contrasenia' AND tipo = '1'";
+    $encriptar = mysqli_real_escape_string($con, $_POST['password']);
+    $contrasenia = sha1($encriptar);
+    $consulta = "SELECT * FROM empleados WHERE codigo = '$usuario' AND contrasenia = '$contrasenia' AND tipo = '1' AND estado = '1'";
     $resultado = $con -> query($consulta);
     $filas = $resultado -> num_rows;
     if($filas > 0){
