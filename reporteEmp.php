@@ -70,7 +70,7 @@ include("leftmenu.php");
 							<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="fas fa-bars"></i> Menu</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
-							$menu1.='<li><a class="dropdown-item" href="edit.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
+							$menu1.='<li><a class="dropdown-item" href="modify2.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
 							$menu1.='<li><a class="dropdown-item"  href="index2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
 							
 							
