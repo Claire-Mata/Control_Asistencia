@@ -9,7 +9,8 @@ if(!empty($_POST)){
     $telefono = mysqli_real_escape_string($con,$_POST["telefono"]);
     $puesto = mysqli_real_escape_string($con,$_POST["puesto"]);    
     $tipo = mysqli_real_escape_string($con,$_POST["tipo"]);
-    $pass = mysqli_real_escape_string($con,$_POST["pass"]);
+    $encriptar = mysqli_real_escape_string($con,$_POST["pass"]);
+    $pass = sha1($encriptar);
     //mysqli_close($con);
     if($codigo != $_SESSION['id_empleado']){
         $consulta = "SELECT * FROM empleados WHERE codigo = '$codigo'";
