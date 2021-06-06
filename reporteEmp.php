@@ -44,6 +44,8 @@ include("leftmenu.php");
 				<th>Acciones</th>
 			</tr>
 			<?php
+			
+			$filter = 1;
 				if($filter){
 					//aqui es para mostrar a los empleados
 					$sql = mysqli_query($con, "SELECT * FROM empleados WHERE estado='$filter' ORDER BY codigo ASC");
