@@ -13,18 +13,16 @@ if(!empty($_POST)) {
             $fila = $resultado -> fetch_assoc();
             if($fila["estado"] != 0){
                 $consulta = "UPDATE `empleados` SET `estado` = '0' WHERE `codigo` = '$co'";
-                echo "<script type='text/javascript'>alert('Usuario Eliminado');</script>";
+                echo "<script type='text/javascript'>alert('¡Eliminado con exito!');</script>";
                 $con -> query($consulta);
             }else{
-                echo "<script type='text/javascript'>alert('ID no encontrado');</script>";
+                echo "<script type='text/javascript'>alert('Código no encontrado.');</script>";
             }
         }else{
-            $mensaje = 'ID no encontrado';
-            echo "<script type='text/javascript'>alert('$mensaje');</script>";
+            echo "<script type='text/javascript'>alert('Código no encontrado.');</script>";
         }
     }else{
-        $mensaje = 'No puedes eliminarte tu mismo';
-        echo "<script type='text/javascript'>alert('$mensaje');</script>";
+        echo "<script type='text/javascript'>alert('¡No puedes eliminarte tu mismo!');</script>";
     }
 }
 
