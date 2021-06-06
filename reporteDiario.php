@@ -3,10 +3,6 @@ include("conexion.php");
 include("head.php");
 include("leftmenu.php");
 ?>
-
-<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
-
 <div class="container ">
 
   <div>
@@ -37,8 +33,8 @@ include("leftmenu.php");
 				}else{
 					$no = 1;
 					while($row = mysqli_fetch_assoc($sql)){
-						//lo siguiente es para el menu de acciones, de aqui podes borrar todo y solo dejar el de 'ver_llegadas.php'
-						//que es donde se hace el reporte de ese empleado
+						// lo siguiente es para el menu de acciones, de aqui se muestra en una tabla
+						// la hora de entrada, salida, si está en la empresa o no, etc. 
 						$codigo = $row['codigo'];
 						$query = mysqli_query($con, "SELECT * FROM empleados WHERE codigo='$codigo'");
 						while($nom = mysqli_fetch_assoc($query)){
@@ -58,7 +54,6 @@ include("leftmenu.php");
 					}
 				}
 				?>
-			<!--<td><a style="text-decoration:none;" href="profile.php?nik='.$row['codigo'].'"><span class="fas fa-user" aria-hidden="true"></span> '.$row['nombres'].'</a></td>-->
 			</table>
 		</div>    
 	</div>
