@@ -8,8 +8,8 @@ role="tablist"
 aria-orientation="vertical"
 >
 	<!--EN EL HREF PONDRAN SU PAGINA PHP DE CADA COSA-->
-	<a href="add2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" > Agregar Datos</a>
-	<a href="remove2.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >Eliminar</a>
+	<a href="form_agregar.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" > Agregar Datos</a>
+	<a href="form_eliminar.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >Eliminar</a>
 	<a href="reporteEmp.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Lista de Empleados</a>
 	<a href="asistencia.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Empleados Activos</a>
 	<a href="reporteDiario.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte diaro</a>

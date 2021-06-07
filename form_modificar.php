@@ -5,7 +5,6 @@ include("head.php");
 include("leftmenu.php");
 include("modificar.php");
 
-
 if( isset($_GET["nik"])){
   $id = $_GET["nik"];
 }
@@ -39,17 +38,11 @@ if( isset($_GET["nik"])){
 
 ?>
 
-<link href="css/bootstrap-datepicker.css" rel="stylesheet">
-
-
-
 <div class="container ">
-
   <div>
     <h1 class="h4 mb-4 mt-5">Datos del empleado &raquo; Modificar datos</h1>
     <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
   </div>
-
   <div class="container mt-5">
     <form class=" row d-flex flex-column " action="" method="post">
         <div class="container mb-3 col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6 ">
