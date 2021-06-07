@@ -73,9 +73,8 @@ include("leftmenu.php");
 							<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="fas fa-bars"></i> Menu</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
-							$menu1.='<li><a class="dropdown-item" href="modify2.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
-							$menu1.='<li><a class="dropdown-item"  href="remove2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
-							
+							$menu1.='<li><a class="dropdown-item" href="form_modificar.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
+							$menu1.='<li><a class="dropdown-item"  href="form_eliminar.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
 							
 							$menu1.="<li><a  class='dropdown-item' href='ver_llegadas.php?codigo=".$row['codigo']."' ><i class='fas fa-eye'></i> Ver LLegadas</a></li>";
 							$menu1.="</ul>
@@ -103,7 +102,7 @@ $(document).ready( function () {
 		"responsive": true,
 		"paging": true,
 		"language":{
-			"lenghtMenu": "mostrar _MENU_ por pagina",
+			"leghntMenu": "mostrar _MENU_ por pagina",
 			"zeroRecords":"no se encontro ningun registro que coincida",
 			"info": "mostrando _TOTAL_ de _MAX_ registros",
 			"search": "buscar",
