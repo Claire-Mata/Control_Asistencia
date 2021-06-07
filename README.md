@@ -51,6 +51,7 @@ Tabla de tareas del segundo sprint con sus respectivos encargados:
 |||Jorge Eduardo Romero Garcia||
 |||Alejandra Claire Aguilar Mata||
 |||Junior Mauricio Villalta Flores||
+|||Cristian Alexander Guardado Escobar||
 
 
 
