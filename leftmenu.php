@@ -14,6 +14,7 @@ aria-orientation="vertical"
 	<a href="asistencia.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Empleados Activos</a>
 	<a href="reporteDiario.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte diaro</a>
 	<a href="reporteAnual.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Reporte Intervalo de tiempo</a>
+	<a href="config_horario.php" class="nav-link my-4 text-light btn-lg" tabindex="-1" role="button" >	Configurar Horario</a>
 	
 </div>
 	<!-- Tab navs -->

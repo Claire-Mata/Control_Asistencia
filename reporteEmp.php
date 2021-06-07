@@ -63,7 +63,7 @@ include("leftmenu.php");
 							<td>'.$no.'</td>
 							<td>'.$row['codigo'].'</td>
 						
-							<td><a style="text-decoration:none;" href="profile.php?nik='.$row['codigo'].'"><span class="fas fa-user" aria-hidden="true"></span> '.$row['nombres'].'</a></td>
+							<td>  <span class="fas fa-user" aria-hidden="true"></span> '.$row['nombres'].'</a></td>
 							<td>'.$row['dui'].'</td>
 							<td>'.$row['telefono'].'</td>
 							<td>'.$row['puesto'].'</td>';
@@ -73,7 +73,7 @@ include("leftmenu.php");
 							<i class="fas fa-bars"></i> Menu</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
 							$menu1.='<li><a class="dropdown-item" href="modify2.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
-							$menu1.='<li><a class="dropdown-item"  href="index2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
+							$menu1.='<li><a class="dropdown-item"  href="remove2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
 							
 							
 							$menu1.="<li><a  class='dropdown-item' href='ver_llegadas.php?codigo=".$row['codigo']."' ><i class='fas fa-eye'></i> Ver LLegadas</a></li>";

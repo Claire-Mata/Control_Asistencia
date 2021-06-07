@@ -2,6 +2,7 @@
 include("head.php");
 include("leftmenu.php");
 include("conexion.php");
+include("funciones.php");
 $codigo= $_GET['codigo'];
 $fechai=date('d-m-Y');
 $fechaf=date('d-m-Y');
@@ -12,7 +13,8 @@ if(mysqli_num_rows($sql) >0){
 	$nombre=$row['nombres'];
 }
 ?>
-	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
+	<!--link href="css/bootstrap-datepicker3.css" rel="stylesheet"-->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 <div class="tab-content flex-grow-1 ms-3" id="v-tabs-tabContent">
 <div class='row'>
 	<h3>Buscar por Empleado y Rango de Fechas</h3>
@@ -23,7 +25,7 @@ if(mysqli_num_rows($sql) >0){
 	<div class="form-control">
 		<label class="col-sm-4 control-label">Fecha de inicio</label>
 		<div class="col-sm-4">
-			<input type="text" name="fechai" id="fechai"  class="input-group date form-control" date="" data-date-format="dd-mm-yyyy" placeholder="00-00-0000" value="<?php echo $fechai?>" required>
+			<input type="text" name="fechai" id="fechai"  class=" date form-control" date="" data-date-format="dd-mm-yyyy" placeholder="00-00-0000" value="<?php echo $fechai?>" required>
 		</div>
 	</div></div>
 	<div class="col-sm-4">
@@ -60,7 +62,7 @@ if(mysqli_num_rows($sql) >0){
 			<th>Observacion</th>
 		</tr>
 	</thead>
-	
+
 	<tbody id='mostrar_datoss'> <!--aqui mete los datos que en reporte-->
 	</tbody>
 	</table>
@@ -69,10 +71,14 @@ if(mysqli_num_rows($sql) >0){
 </div>
 </div>
   <?php include_once ("foot.php");?>
-  <script src="js/bootstrap-datepicker.js"></script>
+  <!--script src="js/bootstrap-datepicker.js"></script-->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 		<script src="js/ver_llegadas.js"></script>
-  <script>
+  <!--script>
   $('.date').datepicker({
     format: 'dd-mm-yyyy',
+		 language: 'es'
   })
-  </script>
+</script-->

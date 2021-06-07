@@ -1,5 +1,6 @@
 <?php
 include("conexion.php");
+include("funciones.php");
 include("head.php");
 include("leftmenu.php");
 ?>
@@ -21,7 +22,7 @@ include("leftmenu.php");
 					<th>Observacion</th>
 				</tr>
 				<?php
-			
+
 				$filter = 1;
 				if($filter){
 					//aqui es para mostrar a los empleados
@@ -34,7 +35,7 @@ include("leftmenu.php");
 					$no = 1;
 					while($row = mysqli_fetch_assoc($sql)){
 						// lo siguiente es para el menu de acciones, de aqui se muestra en una tabla
-						// la hora de entrada, salida, si está en la empresa o no, etc. 
+						// la hora de entrada, salida, si está en la empresa o no, etc.
 						$codigo = $row['codigo'];
 						$query = mysqli_query($con, "SELECT * FROM empleados WHERE codigo='$codigo'");
 						while($nom = mysqli_fetch_assoc($query)){
@@ -46,8 +47,50 @@ include("leftmenu.php");
 								<td>'.$row['hora_e'].'</td>
 								<td>'.$activo.'</td>
 								<td>'.$row['hora_s'].'</td>
-								<td>x</td>
-								</tr>';
+                <td>';
+                //obtener observaciones del dia
+                if(date("w")>0 && date("w")<6){//esto es para el dia de la semana
+                  if($row['hora_e']){
+                    $hes1 = new DateTime($row['fecha']." ".$row0['hora_e_sem']);//aqui agarra la config del horario y la fecha
+                    $hes2 = new DateTime($row['fecha']." ".$row['hora_e']);//aqui agarra la hora de entrada y la fecha
+                    $obs_es=obtener_observa($hes1,$hes2,"E");//las observaciones (si llego tarde y asi)
+                    echo $obs_es;//y se imprimen
+                  }
+                  else{
+                      echo "<span class='text-danger'>No marco Entrada</span>";
+                  }
+
+                  if($row['hora_s']){
+                    $hss1 = new DateTime($row['fecha']." ".$row0['hora_s_sem']);//config horario
+                    $hss2 = new DateTime($row['fecha']." ".$row['hora_s']);//lo mismo que arriba pero con la salida
+                    $obs_ss=obtener_observa($hss1,$hss2,"S");//aqui son observacion de la salida tipo, se fue antes o no marco
+                    echo $obs_ss;
+                  }
+                  else{
+                        echo "<span class='text-danger'>No marco Salida</span>";
+                  }
+                }
+                if(date("w")==6 || date("w")==0){//esto ya es para sabado y domingo
+                  if($row['hora_e']){
+                    $hefd1 = new DateTime($row['fecha']." ".$row0['hora_e_fd']);//config horario
+                    $hefd2 = new DateTime($row['fecha']." ".$row['hora_e']);//esto es para el finde
+                    $obs_efd=obtener_observa($hefd1,$hefd2,"E");
+                    echo $obs_efd;
+                  }else{
+                      echo "<span class='text-danger'>No marco Entrada</span>";
+                  }
+                  if($row['hora_s']){
+                    $hsfd1 = new DateTime($row['fecha']." ".$row0['hora_s_fd']);//config horario
+                    $hsfd2 = new DateTime($row['fecha']." ".$row['hora_s']);
+                    $obs_sfd=obtener_observa($hsfd1,$hsfd2,"S");
+                    echo $obs_sfd;
+                  }
+                  else{
+                    echo "<span class='text-danger'>No marco Salida</span>";
+                  }
+                }
+                echo '</td></tr>';
+
 							}
 						}
 						$no++;
@@ -55,7 +98,7 @@ include("leftmenu.php");
 				}
 				?>
 			</table>
-		</div>    
+		</div>
 	</div>
 </div>
 <?php include_once ("foot.php");?>

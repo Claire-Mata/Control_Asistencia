@@ -2,8 +2,8 @@
 /*Datos de conexion a la base de datos*/
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "";
-$db_name = "phplogin"; // Nombre de tu base
+$db_pass = "Al3j4ndr4";
+$db_name = "empleado"; // Nombre de tu base
 //Ejecutar la conexion 
 $con = new mysqli($db_host, $db_user, $db_pass, $db_name);
 

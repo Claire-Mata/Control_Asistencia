@@ -1,6 +1,7 @@
 <?php
 
 include("conexion.php");
+include("funciones.php");
 $codigo= $_REQUEST['codigo'];
 $fechai = fecha_ymd($_REQUEST['fechai']);
 $fechaf=fecha_ymd($_REQUEST['fechaf']);
@@ -14,7 +15,6 @@ WHERE e.codigo='$codigo'
 AND  e.codigo= m.codigo
 AND m.fecha BETWEEN '$fechai' AND  '$fechaf'";
 $sql = mysqli_query($con, $sql1);
-
 
 if(mysqli_num_rows($sql) == 0){
 	echo '<tr><td colspan="8">No hay datos.</td></tr>';
@@ -63,7 +63,7 @@ if(mysqli_num_rows($sql) == 0){
 									echo "<span class='text-danger'>No marco Salida</span>";
 						}
 					}
-					if(date("w")==6){//esto ya es para sabado y domingo
+					if(date("w")==6 || date("w")==0){//esto ya es para sabado y domingo
 						if($row['hora_e']){
 							$hefd1 = new DateTime($row['fecha']." ".$row0['hora_e_fd']);//config horario
 							$hefd2 = new DateTime($row['fecha']." ".$row['hora_e']);//esto es para el finde
@@ -95,6 +95,7 @@ if(mysqli_num_rows($sql) == 0){
 			<?php
 
 }
+/*
 function obtener_observa($he1,$he2,$tipo){
 	//funcion que obtieme los objetos Datetime y retorna la observacion
 	//si hubo llegads tardes o salidas temprano
@@ -125,4 +126,6 @@ function obtener_observa($he1,$he2,$tipo){
 		 }
 	}
 }
+*/
+
 ?>
