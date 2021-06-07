@@ -2,35 +2,18 @@
 include("conexion.php");
 include("head.php");
 include("leftmenu.php");
+
+
 ?>
 <!-- Bootstrap -->
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 <div class="container ">
-
   <div>
     <h1 class="h4 mb-4 mt-5">Lista de Empleados</h1>
     <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
   </div>
 
   	<div class="row">
-	  <?php
-			if(isset($_GET['aksi']) == 'delete'){
-				
-				$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-				$cek = mysqli_query($con, "SELECT * FROM empleados WHERE codigo='$nik'");
-				if(mysqli_num_rows($cek) == 0){
-					echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
-				}else{
-					//este es para la opcion que aparece eliminar, pero como no haremos eso aqui, lo podes quitar
-					$delete = mysqli_query($con, "DELETE FROM empleados WHERE codigo='$nik'");
-					if($delete){
-						echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
-					}else{
-						echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
-					}
-				}
-			}
-			?>
 		<br>
 		<div class="table-responsive mt-5">
 		<table class="table table-striped table-hover" id="user">
@@ -45,7 +28,6 @@ include("leftmenu.php");
 				<th>Acciones</th>
 			</thead>
 			<?php
-			
 			$filter = 1;
 				if($filter){
 					//aqui es para mostrar a los empleados
@@ -74,7 +56,7 @@ include("leftmenu.php");
 							<i class="fas fa-bars"></i> Menu</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
 							$menu1.='<li><a class="dropdown-item" href="form_modificar.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
-							$menu1.='<li><a class="dropdown-item"  href="form_eliminar.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
+							$menu1.='<li><a class="dropdown-item"  href="eliminar.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
 							
 							$menu1.="<li><a  class='dropdown-item' href='ver_llegadas.php?codigo=".$row['codigo']."' ><i class='fas fa-eye'></i> Ver LLegadas</a></li>";
 							$menu1.="</ul>
@@ -86,9 +68,37 @@ include("leftmenu.php");
 				}
 				?>
 		</table>
+			<?php 
+				if(isset($_GET['res'])) {
+					if( $_GET['res'] == 1 ){
+						echo <<<_MSJ
+							<div class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="alert">
+							Datos eliminados correctamente
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						_MSJ;
+					}
+					if( $_GET['res'] == 2 ){
+							echo <<<_MSJ
+								<div class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="alert">
+								No se encontraron datos.
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+							_MSJ;
+					}
+					if( $_GET['res'] == 3 ){
+							echo <<<_MSJ
+								<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert id="alert"">
+								Error, no se pudieron eliminar los datos
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+							_MSJ;
+					}
+					$_GET['res']=0;
+				}
+			?>
 		</div>    
-	</div>
-	
+	</div>	
 </div>
 
 	<!--  -->
@@ -114,5 +124,6 @@ $(document).ready( function () {
 			}
 		}
 	});
+
 } );
 </script>
