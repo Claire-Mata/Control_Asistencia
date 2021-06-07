@@ -6,10 +6,12 @@ include("leftmenu.php");
 <!-- Bootstrap -->
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 <div class="container ">
-	<div>
-		<h1 class="h4 mb-4 mt-5">Lista de Empleados</h1>
-		<hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
-	</div>
+
+  <div>
+    <h1 class="h4 mb-4 mt-5">Lista de Empleados</h1>
+    <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
+  </div>
+
   	<div class="row">
 	  <?php
 			if(isset($_GET['aksi']) == 'delete'){
@@ -31,8 +33,9 @@ include("leftmenu.php");
 			?>
 		<br>
 		<div class="table-responsive mt-5">
-		<table class="table table-striped table-hover">
-			<tr>
+		<table class="table table-striped table-hover" id="user">
+			
+			<thead >
 				<th>No</th>
 				<th>Código</th>
 				<th>Nombre</th>
@@ -40,7 +43,7 @@ include("leftmenu.php");
 				<th>Teléfono</th>
 				<th>Cargo</th>
 				<th>Acciones</th>
-			</tr>
+			</thead>
 			<?php
 			
 			$filter = 1;
@@ -70,8 +73,9 @@ include("leftmenu.php");
 							<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="fas fa-bars"></i> Menu</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
-							$menu1.='<li><a class="dropdown-item" href="form_modificar.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
-							$menu1.='<li><a class="dropdown-item"  href="form_eliminar.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
+							$menu1.='<li><a class="dropdown-item" href="modify2.php?nik='.$row['codigo'].'"><i class="fas fa-edit"></i> Editar</a></li>';
+							$menu1.='<li><a class="dropdown-item"  href="remove2.php?aksi=delete&nik='.$row['codigo'].'" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['nombres'].'?\')"><i class="fas fa-trash-alt"></i> Borrar</a></li>';
+							
 							
 							$menu1.="<li><a  class='dropdown-item' href='ver_llegadas.php?codigo=".$row['codigo']."' ><i class='fas fa-eye'></i> Ver LLegadas</a></li>";
 							$menu1.="</ul>
@@ -85,6 +89,31 @@ include("leftmenu.php");
 		</table>
 		</div>    
 	</div>
+	
 </div>
 
-<?php include_once ("foot.php");?>
+	<!--  -->
+  <?php include_once ("foot.php");?>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+<script> 
+$(document).ready( function () {
+    $('#user').DataTable({
+		"responsive": true,
+		"paging": true,
+		"language":{
+			"lenghtMenu": "mostrar _MENU_ por pagina",
+			"zeroRecords":"no se encontro ningun registro que coincida",
+			"info": "mostrando _TOTAL_ de _MAX_ registros",
+			"search": "buscar",
+			"searchPlaceholder": "empleados",
+			"infoFiltered": "(de un total de _MAX_ registros)",
+			"paginate":{
+				"previous": "Anterior",
+				"next": "siguiente"
+			}
+		}
+	});
+} );
+</script>
