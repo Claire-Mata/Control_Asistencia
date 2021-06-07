@@ -3,7 +3,14 @@ include("conexion.php");
 include("funciones.php");
 include("head.php");
 include("leftmenu.php");
+
+$fechai = fecha_ymd($_REQUEST['fechai']);
+$fechaf=fecha_ymd($_REQUEST['fechaf']);
+$sql0="SELECT id, hora_e_sem, hora_s_sem, hora_e_fd, hora_s_fd FROM horario";
+$res0 = mysqli_query($con, $sql0);
+$row0 = mysqli_fetch_assoc($res0);
 ?>
+
 <div class="container ">
 
   <div>
