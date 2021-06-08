@@ -47,7 +47,7 @@ Tabla de tareas del segundo sprint con sus respectivos encargados:
 |||Cristian Alexander Guardado Escobar||
 |4|Interfaz y logica de empleados activos|Jorge Eduardo Romero Garcia | `Finalizado`|
 |5   |interfaz y logica de configurar horarios|Alejandra Claire Aguilar Mata     |`Finalizado`|
-|6|logica de reportes diaros, mensuales, anuales y por  empleado|Jorge Luis Granados Umanzor  |`En proceso`|
+|6|logica de reportes diaros, mensuales, anuales y por  empleado|Jorge Luis Granados Umanzor  |`Finalizado`|
 |||Jorge Eduardo Romero Garcia||
 |||Alejandra Claire Aguilar Mata||
 |||Junior Mauricio Villalta Flores||
