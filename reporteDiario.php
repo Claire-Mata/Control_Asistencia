@@ -4,19 +4,12 @@ include("funciones.php");
 include("head.php");
 include("leftmenu.php");
 
-$codigo= $_REQUEST['codigo'];
-$fechai = fecha_ymd($_REQUEST['fechai']);
-$fechaf=fecha_ymd($_REQUEST['fechaf']);
 
 $sql0="SELECT id, hora_e_sem, hora_s_sem, hora_e_fd, hora_s_fd FROM horario";
 $res0 = mysqli_query($con, $sql0);
 $row0 = mysqli_fetch_assoc($res0);
 
-$sql1="SELECT e.codigo,e.nombres,m.fecha,m.hora_e,m.hora_s FROM empleados AS e,marcas AS m
-WHERE e.codigo='$codigo'
-AND  e.codigo= m.codigo
-AND m.fecha BETWEEN '$fechai' AND  '$fechaf'";
-$sql = mysqli_query($con, $sql1);
+
 
 ?>
 

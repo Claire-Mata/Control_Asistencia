@@ -8,7 +8,7 @@ $(document).ready(function() {
 //seleccionar tipo orden en modal, nos ayuda a buscar y los mandamos a la siguiente
 //pagina y los metemos donde esta el id mostrar_datoss que es en la tabla
 $(document).on('click', '#buscar', function(e) {
-    var codigo=$('#codigo').val();
+
     var fechai=$('#fechai').val();
     var fechaf=$('#fechaf').val();
 
@@ -20,8 +20,8 @@ $(document).on('click', '#buscar', function(e) {
     if(f1.isBefore(f2)||f1.isSame(f2)){
       $.ajax({
         type: 'POST',
-        url:'mostrar_llegadas.php',
-        data: {codigo:codigo,fechai:fechai,fechaf:fechaf},
+        url:'verAsistencia.php',
+        data: {fechai:fechai,fechaf:fechaf},
         dataType:'html',
         success: function(datax) {
          $("#mostrar_datoss").html(datax);
@@ -30,6 +30,7 @@ $(document).on('click', '#buscar', function(e) {
     } // true
     else{
       alert("fecha inicio debe ser menor o igual que fecha fin")
+      $("#mostrar_datoss").html('<tr><td colspan="8">No hay datos.</td></tr>');
     }
 
 
