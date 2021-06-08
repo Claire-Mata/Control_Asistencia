@@ -1,8 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['id_empleado'])){
-    header("Location: index.php");
-}
+session_destroy();
+session_start();
 
 // Buscar usuario en base de datos
 if(!empty($_POST)) {
@@ -16,7 +15,12 @@ if(!empty($_POST)) {
         $fila = $resultado -> fetch_assoc();
         $_SESSION['id_empleado'] = $fila["codigo"];
         // echo $_SESSION["idEmpleado"];
-        header("Location: admin_ventana.php");
+
+        if(!isset($_SESSION['id_empleado'])){
+            header("Location: index.php");
+        }else{
+            header("Location: reporteEmp.php");
+        }
     }else{
         $mensaje = 'usuario o contrasenia incoreccto';
         echo "<script type='text/javascript'>alert('$mensaje');</script>";

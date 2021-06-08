@@ -14,7 +14,8 @@ $res_e = mysqli_query($con, $sql_e);
 if(mysqli_num_rows($res_e) == 0){
 	echo '<tr><td colspan="8">No hay datos.</td></tr>';
 }else{
-		$codigo = $row['codigo'];
+		// HAY QUE VERIFICAR ESO CREO QUE ESTABA DEMAS
+		// $codigo = $row['codigo'];
 
 		$diasTrabajados=1;
 			$no = 1;
