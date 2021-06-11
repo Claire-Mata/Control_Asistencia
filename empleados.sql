@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-06-2021 a las 21:29:57
+-- Tiempo de generación: 11-06-2021 a las 11:17:36
 -- Versión del servidor: 10.3.25-MariaDB-0ubuntu0.20.04.1
 -- Versión de PHP: 7.4.3
 
@@ -38,14 +38,14 @@ CREATE TABLE `empleados` (
   `estado` int(1) NOT NULL,
   `tipo` int(1) NOT NULL,
   `contrasenia` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
-  `activo` int(1) NOT NULL
+  `disponible` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `empleados` (`codigo`, `nombres`, `dui`, `direccion`, `telefono`, `puesto`, `estado`, `tipo`, `contrasenia`, `activo`) VALUES
+INSERT INTO `empleados` (`codigo`, `nombres`, `dui`, `direccion`, `telefono`, `puesto`, `estado`, `tipo`, `contrasenia`, `disponible`) VALUES
 ('ADMIN', 'Super acceso', '12345678', 'xxx', '87654321', 'Master edition', 1, 1, 'd033e22ae348aeb5660fc2140aec35850c4da997', 0);
 
 -- --------------------------------------------------------
@@ -119,7 +119,7 @@ ALTER TABLE `horario`
 -- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
