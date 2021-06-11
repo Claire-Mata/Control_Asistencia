@@ -50,7 +50,7 @@ $row0 = mysqli_fetch_assoc($res0);
 						$query = mysqli_query($con, "SELECT * FROM empleados WHERE codigo='$codigo'");
 						while($nom = mysqli_fetch_assoc($query)){
 							if($nom['estado'] == 1){
-								$activo = $nom['activo'] == 0 ? 'Sí' : 'No';
+								$activo = $nom['disponible'] != 0 ? 'Sí' : 'No';
 								echo '<tr>
 								<td>'.$no.'</td>
 								<td>'.$nom['nombres'].'</td>
