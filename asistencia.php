@@ -5,7 +5,7 @@ require_once("leftmenu.php");
 
 
 $activo = 1;
-$consulta = "SELECT * FROM empleados WHERE activo = '$activo'";
+$consulta = "SELECT * FROM empleados WHERE disponible = '$activo'";
 $resultados = $con -> query($consulta);
 $activos = $resultados -> fetch_all();
 

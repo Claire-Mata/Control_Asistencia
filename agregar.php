@@ -25,9 +25,13 @@ if(!empty($_POST)){
                 echo "<script type='text/javascript'>alert('Intente con otro código');</script>";
             }
         }else{
-            $consulta = "INSERT INTO empleados(codigo, nombres, dui, direccion, telefono, puesto, estado,tipo,contrasenia,activo) VALUES('$codigo','$nombres', '$dui', '$direccion', '$telefono', '$puesto', '1', '$tipo', '$pass', '0')";
+            $consulta = "INSERT INTO empleados(codigo, nombres, dui, direccion, telefono, puesto, estado,tipo,contrasenia,disponible) VALUES('$codigo','$nombres', '$dui', '$direccion', '$telefono', '$puesto', '1', '$tipo', '$pass', '1')";
             $mensaje = 'Empleado agregado con exito!';
             $con -> query($consulta);
+            //esta consulta es para solucionar el bug de que al marcar entrada por primera vez no lo cambiaba a activo, no se que pasaba, solucion cutre, pero funciona
+            $consulta = "UPDATE empleados SET disponible='0' WHERE codigo='$codigo'";
+            $con ->query($consulta);
+
             echo "<script type='text/javascript'>alert('$mensaje');</script>";
         }
     }else{
