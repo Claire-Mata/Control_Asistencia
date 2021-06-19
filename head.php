@@ -1,7 +1,7 @@
 <!--CABEZA DE LA INTERFAZ DEL ADMINISTRADOR CON SU NAVBAR-->
 <?php
 include("conexion.php");
-
+//para iniciar sesion
 session_start();
 if(!isset($_SESSION['id_empleado'])){
     header("Location: index.php");

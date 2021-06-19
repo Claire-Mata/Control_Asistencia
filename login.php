@@ -4,6 +4,9 @@ session_destroy();
 session_start();
 
 // Buscar usuario en base de datos
+//PARA ENTRAR EN TIPO ADMINISTRADOR
+//USUARIO: ADMIN
+//CONTRA: admin
 if(!empty($_POST)) {
     $usuario = mysqli_real_escape_string($con, $_POST['name']);
     $encriptar = mysqli_real_escape_string($con, $_POST['password']);
@@ -14,17 +17,18 @@ if(!empty($_POST)) {
     if($filas > 0){
         $fila = $resultado -> fetch_assoc();
         $_SESSION['id_empleado'] = $fila["codigo"];
-        // echo $_SESSION["idEmpleado"];
+        // si no inicia sesion que lo mande al index
 
         if(!isset($_SESSION['id_empleado'])){
             header("Location: index.php");
         }else{
+            //si no que lo mande a reporte de empleado
             header("Location: reporteEmp.php");
         }
     }else{
         $mensaje = 'usuario o contrasenia incoreccto';
         echo "<script type='text/javascript'>alert('$mensaje');</script>";
-        // header("Location: index.php");   
+        // si es incorrecto algun campo
     }
 }
 ?>

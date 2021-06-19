@@ -1,21 +1,17 @@
 <?php
+//aqui es el reporte diario
 include("conexion.php");
 include("funciones.php");
 include("head.php");
 include("leftmenu.php");
-
-
+//nos traemos las cosas de horario
 $sql0="SELECT id, hora_e_sem, hora_s_sem, hora_e_fd, hora_s_fd FROM horario";
 $res0 = mysqli_query($con, $sql0);
 $row0 = mysqli_fetch_assoc($res0);
-
-
-
 ?>
 
 
 <div class="container ">
-
   <div>
     <h1 class="h4 mb-4 mt-5">Reporte diario</h1>
     <hr class="bg-dark" style="height:2px; width:100%; border-width:0; color:#343a40; background-color:#343a40">
@@ -40,6 +36,7 @@ $row0 = mysqli_fetch_assoc($res0);
 				}
 
 				if(mysqli_num_rows($sql) == 0){
+          //cuando no hay datos
 					echo '<tr><td colspan="8">No hay datos.</td></tr>';
 				}else{
 					$no = 1;
@@ -67,7 +64,7 @@ $row0 = mysqli_fetch_assoc($res0);
                     echo $obs_es;//y se imprimen
                   }
                   else{
-                      echo "<span class='text-danger'>No marco Entrada</span>";
+                    echo "<span class='text-danger'>No marco Entrada</span>";
                   }
 
                   if($row['hora_s']){
@@ -77,7 +74,7 @@ $row0 = mysqli_fetch_assoc($res0);
                     echo $obs_ss;
                   }
                   else{
-                        echo "<span class='text-danger'>No marco Salida</span>";
+                    echo "<span class='text-danger'>No marco Salida</span>";
                   }
                 }
                 if(date("w")==6 || date("w")==0){//esto ya es para sabado y domingo
@@ -87,7 +84,7 @@ $row0 = mysqli_fetch_assoc($res0);
                     $obs_efd=obtener_observa($hefd1,$hefd2,"E");
                     echo $obs_efd;
                   }else{
-                      echo "<span class='text-danger'>No marco Entrada</span>";
+                    echo "<span class='text-danger'>No marco Entrada</span>";
                   }
                   if($row['hora_s']){
                     $hsfd1 = new DateTime($row['fecha']." ".$row0['hora_s_fd']);//config horario
@@ -100,7 +97,6 @@ $row0 = mysqli_fetch_assoc($res0);
                   }
                 }
                 echo '</td></tr>';
-
 							}
 						}
 						$no++;

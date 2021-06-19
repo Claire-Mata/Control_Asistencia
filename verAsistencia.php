@@ -1,36 +1,27 @@
 <?php
-
 include("conexion.php");
 include("funciones.php");
-
 $fechai = fecha_ymd($_REQUEST['fechai']);
 $fechaf=fecha_ymd($_REQUEST['fechaf']);
-
-
-
 $sql_e="SELECT  * FROM empleados";
 $res_e = mysqli_query($con, $sql_e);
-
 if(mysqli_num_rows($res_e) == 0){
 	echo '<tr><td colspan="8">No hay datos.</td></tr>';
 }else{
-		// HAY QUE VERIFICAR ESO CREO QUE ESTABA DEMAS
-		// $codigo = $row['codigo'];
+	//primero estas variables nos ayudaran despues
+	$diasTrabajados=1;
+	$no = 1;
+	$llegadasTardia=0;
+	$salidasTemprano=0;
 
-		$diasTrabajados=1;
-			$no = 1;
-			$llegadasTardia=0;
-			$salidasTemprano=0;
-
-			while($row = mysqli_fetch_assoc($res_e)){
-				$observacion="";
-				$arrayconta = cuenta_salidas_entradas($row['codigo'],$fechai,$fechaf);
-				//$llegatardes,$saltemprano
-				$llegTarde=$arrayconta[0];
-				$salTemp=$arrayconta[1];
-				$observacion=$arrayconta[2];
-
-		?>
+	while($row = mysqli_fetch_assoc($res_e)){
+		$observacion="";
+		$arrayconta = cuenta_salidas_entradas($row['codigo'],$fechai,$fechaf);
+		$llegTarde=$arrayconta[0];
+		$salTemp=$arrayconta[1];
+		$observacion=$arrayconta[2];
+		//luego mostramos
+?>
 		<tr>
 			<td>
 				<?php echo $no?> <!--el numero-->
@@ -43,8 +34,7 @@ if(mysqli_num_rows($res_e) == 0){
 			</td>
 			<td>
 				<?php  echo diasTrab($row['codigo'],$fechai,$fechaf);
-
-				 ?>
+				?>
 			</td>
 			<td>
 				<?php
@@ -56,20 +46,16 @@ if(mysqli_num_rows($res_e) == 0){
 			</td>
 			<td>
 				<?php	echo $observacion;?>
-		</td>
+			</td>
 		</tr>
 		<?php
 		$no++;
-		//$diasTrabajados++;
-		}
-		?>
-
-		<!--/table>
-</div-->
-			<?php
+	}
+	?>
+	<?php
 
 }
-
+//funcion para los dias trabajados
 function diasTrab($codigo,$fechai,$fechaf){
 	include("conexion.php");
 	//include("funciones.php");
@@ -81,8 +67,9 @@ function diasTrab($codigo,$fechai,$fechaf){
 			 $codigo=$row['codigo'];
 		 	 $diasTrab++;
 		}
-		return $diasTrab;
+	return $diasTrab;
 }
+//funcion que cuenta cuantas salidas y entradas tardes tuvo el trabajador
 function cuenta_salidas_entradas($codigo,$fechai,$fechaf){
 	include("conexion.php");
 
@@ -109,9 +96,9 @@ function cuenta_salidas_entradas($codigo,$fechai,$fechaf){
 			$tiempoe_dif = $hes2->diff($hes1);
 			$invert_e    = $tiempoe_dif->invert;
 			if (isset($invert_e)){
-					if ($invert_e==1 ) {
-						$llegatardes++;
-					}
+				if ($invert_e==1 ) {
+					$llegatardes++;
+				}
 			}
 			//salidas temprano del trabajo
 			$hss1 = new DateTime($row['fecha']." ".$row0['hora_s_sem']);//aqui agarra la config del horario y la fecha
@@ -119,9 +106,9 @@ function cuenta_salidas_entradas($codigo,$fechai,$fechaf){
 			$tiempos_dif = $hss2->diff($hss1);
 			$invert_s    = $tiempos_dif->invert;
 			if (isset($invert_s)){
-					if ($invert_s==0 ) {
-						$saltemprano++;
-					}
+				if ($invert_s==0 ) {
+					$saltemprano++;
+				}
 			}
 
 		}
@@ -133,9 +120,9 @@ function cuenta_salidas_entradas($codigo,$fechai,$fechaf){
 			$tiempoe_dif2 = $hefd2->diff($hefd1);
 			$invert2    = $tiempoe_dif2->invert;
 			if (isset($invert2)){
-					if ($invert2==1 ) {
-					$llegatardes++;
-					}
+				if ($invert2==1 ) {
+				$llegatardes++;
+				}
 			}
 			//salida temprano
 			$hsfd1 = new DateTime($row['fecha']." ".$row0['hora_s_fd']);//config horario
@@ -143,9 +130,9 @@ function cuenta_salidas_entradas($codigo,$fechai,$fechaf){
 			$tiempof_dif = $hsfd2->diff($hsfd1);
 			$invert_sf    = $tiempof_dif->invert;
 			if (isset($invert_sf)){
-					if ($invert_sf==0) {
-						$saltemprano++;
-					}
+				if ($invert_sf==0) {
+					$saltemprano++;
+				}
 			}
 		}
 
