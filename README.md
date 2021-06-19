@@ -3,9 +3,12 @@ Sistema de control de asistencia de empleados
 
 ## IMPORTANTE
 
-Para poder acceder como administrador al sistema;
-Usuario: ADMIN
-contraseña: admin
+Para poder acceder como administrador al sistema:
+
+
+Usuario: `ADMIN`
+
+contraseña: `admin`
 
 
 ## Product Backlog
