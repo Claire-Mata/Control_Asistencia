@@ -1,6 +1,13 @@
 # Control_Asistencia
 Sistema de control de asistencia de empleados
 
+## IMPORTANTE
+
+Para poder acceder como administrador al sistema;
+Usuario: ADMIN
+contraseña: admin
+
+
 ## Product Backlog
 
 Tabla de nuestro product backlog:
